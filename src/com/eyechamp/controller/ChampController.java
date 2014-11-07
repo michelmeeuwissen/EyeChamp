@@ -1,4 +1,4 @@
-package com.logic8.controller;
+package com.eyechamp.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

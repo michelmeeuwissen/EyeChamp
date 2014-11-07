@@ -1,4 +1,4 @@
-package com.logic8.controller;
+package com.eyechamp.controller;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
