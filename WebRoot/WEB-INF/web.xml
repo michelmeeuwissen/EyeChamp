@@ -29,6 +29,7 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
     <!-- This is just a comment -->
+	<!-- Another comment -->
     <!-- Error pages -->
 	<error-page>		
 		<location>/error</location>
