@@ -1,6 +1,6 @@
 # EyeChamp
 
-
+################# GIT:
 Best way to setup git project:
 C:\temp>md EyeChamp
 
@@ -24,3 +24,17 @@ From https://github.com/michelmeeuwissen/EyeChamp
 C:\temp\EyeChamp>git checkout -t origin/master
 Branch master set up to track remote branch master from origin.
 Already on 'master'
+
+
+################# MongoDB:
+Download:
+http://www.mongodb.org/downloads
+
+Install MongoDB for your system.
+Windows:
+http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/
+
+* After install open MongoDB console
+Create db eyechamp and repositories by running the following comando's in mongo console:
+> use eyechamp
+> db.createCollection("players")
