@@ -1,17 +1,19 @@
 # EyeChamp
 
 ################# GIT:
-Best way to setup git project:
+Best way to setup git project In Windows cmd:
 C:\temp>md EyeChamp
 
 C:\temp>cd EyeChamp
 
 C:\temp\EyeChamp>git init
+
 Initialized empty Git repository in C:/temp/EyeChamp/.git/
 
 C:\temp\EyeChamp>git remote add origin https://github.com/michelmeeuwissen/EyeChamp.git
 
 C:\temp\EyeChamp>git fetch
+
 remote: Counting objects: 107, done.
 remote: Compressing objects: 100% (60/60), done.
 remote: Total 107 (delta 24), reused 103 (delta 24)
@@ -22,6 +24,7 @@ From https://github.com/michelmeeuwissen/EyeChamp
  * [new branch]      master     -> origin/master
 
 C:\temp\EyeChamp>git checkout -t origin/master
+
 Branch master set up to track remote branch master from origin.
 Already on 'master'
 
