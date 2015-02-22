@@ -1,4 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>EyeChamp</groupId>
   <artifactId>EyeChamp</artifactId>
@@ -14,6 +14,7 @@
 	<servlet.api.version>3.0.1</servlet.api.version>
 	<jsp.api.version>2.2</jsp.api.version>
 	<cglib.version>2.2.2</cglib.version>
+    <log4j.version>2.1</log4j.version>
 	
 	<org.mongodb.version>2.12.4</org.mongodb.version>
 	<org.springframework.data.version>1.6.1.RELEASE</org.springframework.data.version>
@@ -79,6 +80,18 @@
 		<!-- Provided by Tomcat. So should not be in the war -->
 		<scope>provided</scope>			
 	</dependency>
+
+    <!-- Log4j 2 -->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
   </dependencies>
   <build>
     <resources>
