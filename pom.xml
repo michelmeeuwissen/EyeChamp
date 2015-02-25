@@ -18,6 +18,7 @@
         <mockito.version>1.10.19</mockito.version>
         <spring.test.version>4.1.5.RELEASE</spring.test.version>
         <log4j.version>2.1</log4j.version>
+        <junit.version>4.10</junit.version>
 
         <org.mongodb.version>2.12.4</org.mongodb.version>
         <org.springframework.data.version>1.6.1.RELEASE</org.springframework.data.version>
@@ -110,7 +111,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.10</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
 
