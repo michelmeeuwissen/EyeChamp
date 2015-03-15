@@ -16,7 +16,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
  */
 @Configuration
 @EnableMongoRepositories("com.eyechamp")
-@PropertySource(value="classpath:db.properties")
+@PropertySource(value="file:/eyechamp/config/eyechamp.properties")
 public class DbConfig extends AbstractMongoConfiguration {
 
     @Autowired
