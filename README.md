@@ -39,5 +39,7 @@ http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/
 
 * After install open MongoDB console
 Create db eyechamp and repositories by running the following comando's in mongo console:
+
 > use eyechamp
+
 > db.createCollection("players")
