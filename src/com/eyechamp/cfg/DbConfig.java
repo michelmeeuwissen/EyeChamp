@@ -2,8 +2,11 @@ package com.eyechamp.cfg;
 
 import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 import org.springframework.data.mongodb.config.AbstractMongoConfiguration;
 import org.springframework.data.mongodb.core.MongoFactoryBean;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
@@ -13,12 +16,19 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
  */
 @Configuration
 @EnableMongoRepositories("com.eyechamp")
+@PropertySource(value="classpath:db.properties")
 public class DbConfig extends AbstractMongoConfiguration {
+
+    @Autowired
+    Environment env;
 
     @Bean
     public MongoFactoryBean mongoFactoryBean(){
         MongoFactoryBean mongo = new MongoFactoryBean();
-        mongo.setHost("localhost");
+        String mongodbUrl = env.getProperty("mongodb.url");
+        String mongodPort = env.getProperty("mongodb.port");
+        mongo.setHost(mongodbUrl);
+        mongo.setPort(Integer.parseInt(mongodPort));
         return mongo;
     }
 
@@ -29,7 +39,8 @@ public class DbConfig extends AbstractMongoConfiguration {
 
     @Override
     public Mongo mongo() throws Exception {
-        return new MongoClient("localhost");
+        MongoFactoryBean mongoFactoryBean = mongoFactoryBean();
+        return mongoFactoryBean.getObject();
     }
 
     @Override

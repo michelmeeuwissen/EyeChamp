@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="INFO">
+<Configuration status="DEBUG">
 	<Appenders>
 		<Console name="Console" target="SYSTEM_OUT">
 			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
 		</Console>
+		<File name="MyFile" fileName="c:/temp/EyeChamp.log">
+			<PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+		</File>
+		<File name="SpringFile" fileName="c:/temp/EyeChamp-spring.log">
+			<PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+		</File>
 	</Appenders>
 	<Loggers>
-		<Logger name="org.springframework" level="debug">
+		<Logger name="org.springframework" level="DEBUG">
 			<AppenderRef ref="Console"/>
+			<AppenderRef ref="MyFile" level="DEBUG" />
+			<AppenderRef ref="SpringFile" level="DEBUG" />
 		</Logger>
-		<Root level="debug">
-			<AppenderRef ref="Console" />
+		<Root level="DEBUG" additivity="false">
+			<AppenderRef ref="Console" level="DEBUG"/>
+			<AppenderRef ref="MyFile" level="DEBUG" />
+			<AppenderRef ref="SpringFile" level="DEBUG" />
 		</Root>
 	</Loggers>
 </Configuration>
