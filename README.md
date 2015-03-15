@@ -28,6 +28,13 @@ C:\temp\EyeChamp>git checkout -t origin/master
 Branch master set up to track remote branch master from origin.
 Already on 'master'
 
+################# Installation directory
+
+Create install directory on system (also on windows root drive):
+
+/eyechamp/config/eyechamp.properties
+/eyechamp/log/
+
 
 ################# MongoDB:
 Download:
