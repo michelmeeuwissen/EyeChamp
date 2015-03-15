@@ -152,6 +152,7 @@
                 <version>2.2</version>
                 <configuration>
                     <warSourceDirectory>${basedir}/WebRoot</warSourceDirectory>
+                    <warName>EyeChamp</warName>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
