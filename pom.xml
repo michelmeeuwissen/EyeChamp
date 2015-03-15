@@ -117,15 +117,13 @@
 
     </dependencies>
     <build>
+        <sourceDirectory>src</sourceDirectory>
         <resources>
             <resource>
-                <directory>src</directory>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                </excludes>
-            </resource>
-            <resource>
                 <directory>resources</directory>
+                <includes>
+                    <include>*.xml</include>
+                </includes>
             </resource>
         </resources>
         <plugins>
