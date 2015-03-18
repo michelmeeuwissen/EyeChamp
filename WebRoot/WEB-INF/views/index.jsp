@@ -46,7 +46,10 @@
 						<div class="row">
 					</c:if>
 					<div class="col-md-6">
-						<p><a class="btn btn-default btn-lg" href="#" role="button"><strong>${i.count}</strong> ${player.name}</a></p>
+						<p>
+                            <a class="btn btn-default btn-lg" href="#" role="button"><strong>${i.count}</strong> ${player.name}</a>
+                            <a href="<c:url value="/player/remove/${player.name}" />" title="Delete user">X</a>
+                        </p>
 					</div>
 					<c:if test="${i.count % 2 == 0}">
 						</div>

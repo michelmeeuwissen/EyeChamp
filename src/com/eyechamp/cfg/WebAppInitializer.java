@@ -22,7 +22,6 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
             LOGGER.info("Property file /eyechamp/config/eyechamp.properties exists");
         }else{
             LOGGER.fatal("File /eyechamp/config/eyechamp.properties does not exist. Application can not be started");
-            return null;
         }
         return new Class<?>[]{AppConfig.class};
     }
